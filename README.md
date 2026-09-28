@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <b>Building AI-powered automations and backend systems.</b><br />
-  BS Data Science student · Python · APIs &amp; automated workflows
+  <b>Building practical AI systems that connect tools, data, and workflows.</b><br />
+  BS Data Science · Python · APIs · n8n · Backend Systems
 </p>
 
 <p align="center">
@@ -16,12 +16,12 @@
 
 ## 👨‍💻 About me
 
-I'm a BS Data Science student focused on **AI engineering, automation, and backend systems**. I build applications and automated workflows that connect APIs, data, and AI tools to solve practical problems.
+I’m a BS Data Science student interested in **AI engineering, automation, and backend systems**. I like building tools that connect APIs, data, and services into useful workflows.
 
-- 🛠️ I build a lot of automation-heavy side projects, usually around problems I find annoying or repetitive.
+- 🛠️ I build automation-heavy side projects, usually around repetitive or annoying problems.
 - 🐍 Most of what I make involves some mix of Python, APIs, bots, desktop apps, and backend logic.
-- 🤖 I’m especially interested in AI that actually does things — calling tools, moving data between services, triggering workflows, and interacting with real systems.
-- 🌱 Right now I’m exploring n8n, LLM-powered workflows, RAG, agents, and practical ways to automate real tasks.
+- 🤖 I’m especially interested in AI that actually does things — calling tools, moving data between services, and triggering workflows.
+- 🌱 Right now I’m exploring n8n, RAG, agents, and LLM-powered workflows.
 
 ## 🛠️ Languages & tools
 
