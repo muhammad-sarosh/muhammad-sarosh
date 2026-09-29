@@ -7,7 +7,9 @@ from pathlib import Path
 import json
 import os
 import re
+import time
 import xml.etree.ElementTree as ET
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 
@@ -26,8 +28,19 @@ def fetch(url):
     if url.startswith("https://api.github.com/") and os.getenv("GITHUB_TOKEN"):
         headers["Authorization"] = "Bearer " + os.environ["GITHUB_TOKEN"]
     request = Request(url, headers=headers)
-    with urlopen(request, timeout=20) as response:
-        return response.read().decode("utf-8")
+    for attempt in range(4):
+        try:
+            with urlopen(request, timeout=20) as response:
+                return response.read().decode("utf-8")
+        except HTTPError as error:
+            if error.code not in {429, 500, 502, 503, 504} or attempt == 3:
+                raise
+        except (URLError, TimeoutError, ConnectionError):
+            if attempt == 3:
+                raise
+        delay = 2 ** (attempt + 1)
+        print(f"Temporary fetch failure for {url}; retrying in {delay}s", flush=True)
+        time.sleep(delay)
 
 
 def svg(width, height, body, title):
